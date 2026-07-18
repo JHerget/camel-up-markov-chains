@@ -2,13 +2,13 @@ package game
 
 type Game struct {
 	Board []Space `json:"board"`
-	Rolls []Die
+	Rolls []Die   `json:"rolls"`
 }
 
 type Space struct {
-	ID             int
-	SpectatorValue int
-	Camels         []Camel
+	ID             int     `json:"id"`
+	SpectatorValue int     `json:"spectatorValue"`
+	Camels         []Camel `json:"camels"`
 }
 
 type Camel string
@@ -24,17 +24,17 @@ const (
 )
 
 type Die struct {
-	Color DieColor
-	Value int
+	Color DieColor `json:"color"`
+	Value int      `json:"value"`
 }
 
 type DieColor string
 
 const (
-	BlueDice   DieColor = "blue"
-	GrayDice   DieColor = "gray"
-	GreenDice  DieColor = "green"
-	PurpleDice DieColor = "purple"
-	RedDice    DieColor = "red"
-	YellowDice DieColor = "yellow"
+	BlueDie   DieColor = "blue"
+	GrayDie   DieColor = "gray"
+	GreenDie  DieColor = "green"
+	PurpleDie DieColor = "purple"
+	RedDie    DieColor = "red"
+	YellowDie DieColor = "yellow"
 )
